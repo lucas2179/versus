@@ -402,3 +402,27 @@ a:active {
     box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.8);
   }
 }
+#menu-lateral{
+  position: fixed;
+  top:200px;
+  left: 0;
+  width: 3%;
+  height: 3%;
+}
+#menu-lateral ul li{
+  position: relative;
+  width: 100%;
+  border-bottom: 2px solid rgba(1,1,1,.9);
+  height: 4%;
+}
+
+.unselected{
+  background-color: rgba(3,3,3,.3);
+}
+.selected{
+  background-color: rgba(3,3,3,.7);
+}
+#menu-lateral ul li img{
+  position: relative;
+  width: 100%;
+}

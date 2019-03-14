@@ -1,39 +1,7 @@
 
 var verify = { amazon: true, azure: true, google: true, ibm: true, oracle: true, alibaba: true };
 
-// function hidecolumn(idcolumn){
-//     var prov = idcolumn;
-//     var provnumber;
-//     if(prov == "amazon"){
-//         provnumber = 1;
-//     }
-//     if(prov == "azure"){
-//         provnumber = 2;
-//     }
-//     if(prov == "google"){
-//         provnumber = 3;
-//     }
-//     if(prov == "ibm"){
-//         provnumber = 4;
-//     }
-//     if(prov == "oracle"){
-//         provnumber = 5;
-//     }
-//     if(prov == "alibaba"){
-//         provnumber = 6;
-//     }
-//     if(verify[prov] == true){
-//         document.getElementById(prov).className="unselected";
 
-//         verify[prov] = false;
-//     }
-//     else{
-//         document.getElementById(prov).className="selected";
-//         $('table').showColumn(provnumber);
-//         verify[prov] = true;
-
-//     }
-// }
 var cont;
 cont = 6;
 $('#btamazon').click(function () {
@@ -143,14 +111,17 @@ $('#btalibaba').click(function () {
   }
   ajuste();
 });
-var classtable = 6;
+
+var classtable = 'table6';
 var count;
+var tables = document.getElementsByClassName('table').length;
 function ajuste() {
-  var tables = document.getElementsByClassName('table').length;
+  
   if (cont == 1) {
     for(count == 0; count <= tables-1; count++){
       document.getElementsByClassName('table')[count].classList.remove(classtable);
-      document.getElementsByClassName('table')[count].classList.add('table1');
+      document.getElementsByClassName('table')[count].style.width = "28.6% !important";
+      //document.getElementsByClassName('table')[count].classList.add('table1');
     }
 
       
@@ -161,28 +132,33 @@ function ajuste() {
   else if (cont == 2) {
     for(count == 0; count <= tables-1; count++){
       document.getElementsByClassName('table')[count].classList.remove(classtable);
-      document.getElementsByClassName('table')[count].classList.add('table2');
+      //document.getElementsByClassName('table')[count].classList.add('table2');
+      document.getElementsByClassName('table')[count].style.width = "42.88%";
     }
     classtable = 'table2';
   }
   else if (cont == 3) {
     for(count == 0; count <= tables-1; count++){
       document.getElementsByClassName('table')[count].classList.remove(classtable);
-      document.getElementsByClassName('table')[count].classList.add('table3');
+      //document.getElementsByClassName('table')[count].classList.add('table3');
+      document.getElementsByClassName('table')[count].style.width = "57.16%";
     }
     classtable = 'table3';
   }
   else if (cont == 4) {
     for(count == 0; count <= tables-1; count++){
       document.getElementsByClassName('table')[count].classList.remove(classtable);
-      document.getElementsByClassName('table')[count].classList.add('table4');
+      //document.getElementsByClassName('table')[count].classList.add('table4');
+      document.getElementsByClassName('table')[count].style.width = "71.44%";
     }
     classtable = 'table4';
   }
   else if (cont == 5) {
     for(count == 0; count <= tables-1; count++){
       document.getElementsByClassName('table')[count].classList.remove(classtable);
-      document.getElementsByClassName('table')[count].classList.add('table5');
+      //document.getElementsByClassName('table')[count].classList.add('table5');
+      document.getElementsByClassName('table')[count].style.width = "85.72%";
+
     }
     classtable = 'table5';
   }
@@ -196,7 +172,8 @@ function ajuste() {
 
     }
     for(count == 0; count <= tables-1; count++){
-      document.getElementsByClassName('table')[count].classList.add('table6');
+      //document.getElementsByClassName('table')[count].classList.add('table6');
+      document.getElementsByClassName('table')[count].style.width = "100%";
     }
 
 

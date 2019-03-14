@@ -1902,9 +1902,36 @@ pre code {
 
 .table {
   table-layout: fixed !important;
-  width: 100% !important;
   color: #212529;
   word-wrap: break-word;
+  margin-left: auto !important;
+  margin-right: auto !important;
+}
+.table {
+  table-layout: fixed !important;
+  color: #212529;
+  word-wrap: break-word;
+}
+.table6{
+  width: 100% !important;
+}
+.table1{
+  width: 28.6% !important;
+}
+.table2{
+  width: 42.88% !important;
+}
+.table3{
+  width: 57.16% !important;
+}
+.table4{
+  width: 71.44% !important;
+}
+.table5{
+  width: 85.72% !important;
+}
+.table0{
+  width: 14.32% !important;
 }
 
 .tooltip {
@@ -2214,8 +2241,11 @@ pre code {
   color: #fff;
   background-color: #343a40;
   border-color: #454d55;
+  
 }
-
+.table th{
+  width: 15px !important;
+}
 .table .thead-light th {
   color: #495057;
   background-color: #e9ecef;
