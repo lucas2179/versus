@@ -21,7 +21,7 @@ function tableCreate(name, id) {
     cont2.setAttribute("class", "container-fluid");
 
     var table = document.createElement("table");
-    table.setAttribute("class", "table table-bordered table-striped table-dark");
+    table.setAttribute("class", "table table6 table-bordered table-striped table-dark");
     table.setAttribute("id", id);
     table.setAttribute("style", "max-height: 30px !important");
 

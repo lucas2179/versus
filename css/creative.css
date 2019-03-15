@@ -255,6 +255,7 @@ caption {
 th {
   text-align: center;
   vertical-align: middle !important;
+  width: 100px;
 }
 
 label {
@@ -1904,6 +1905,7 @@ pre code {
   table-layout: fixed !important;
   color: #212529;
   word-wrap: break-word;
+
   margin-left: auto !important;
   margin-right: auto !important;
 }
@@ -2244,7 +2246,7 @@ pre code {
   
 }
 .table th{
-  width: 15px !important;
+  width: 105px !important;
 }
 .table .thead-light th {
   color: #495057;
