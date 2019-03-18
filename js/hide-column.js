@@ -1,23 +1,28 @@
 
 var verify = { amazon: true, azure: true, google: true, ibm: true, oracle: true, alibaba: true };
-
+var tes = 6;
 var cont;
 cont = 6;
 var b;
 $('#btamazon').click(function () {
   if (verify['amazon'] == true) {
-    $("#btamazon").removeClass("selected");
-    $("#btamazon").addClass("unselected");
-    ash.get('.table').hideColumn(2);
-    verify['amazon'] = false;
-    cont = cont - 1;
-    b = 0;
+   // $("#btamazon").removeClass("selected");
+   // $("#btamazon").addClass("unselected");
+    //$('.table').hideColumn(2);
+    if(cont >= 2){
+      $('.caws').fadeToggle('fast');
+      verify['amazon'] = false;
+      cont = cont - 1;
+      b = 0;
+    }
+
     
   }
   else {
-    $("#btamazon").removeClass("unselected");
-    $("#btamazon").addClass("selected");
-    ash.get('.table').showColumn(2);
+   // $("#btamazon").removeClass("unselected");
+   // $("#btamazon").addClass("selected");
+    //$('.table').showColumn(2);
+    $('.caws').fadeToggle('fast');
     verify['amazon'] = true;
     cont = cont + 1;
     b = 1;
@@ -26,93 +31,134 @@ $('#btamazon').click(function () {
 });
 
 $('#btazure').click(function () {
-  if (verify['azure'] == true) {
-    $("#btazure").removeClass("selected");
-    $("#btazure").addClass("unselected");
-    ash.get('.table').hideColumn(3);
-    verify['azure'] = false;
-    cont = cont - 1;
+  if (verify['azure'] == true && cont != 1) {
+  //  $("#btazure").removeClass("selected");
+  //  $("#btazure").addClass("unselected");
+    //$('.table').hideColumn(3);
+    if(cont >= 2){
+      $('.cazure').fadeToggle('fast');
+      verify['azure'] = false;
+      cont = cont - 1;
+      b = 0;
+    }
+
   }
   else {
-    $("#btazure").removeClass("unselected");
-    $("#btazure").addClass("selected");
-    ash.get('.table').showColumn(3);
+  //  $("#btazure").removeClass("unselected");
+  //  $("#btazure").addClass("selected");
+    //$('.table').showColumn(3);
+    $('.cazure').fadeToggle('fast');
     verify['azure'] = true;
     cont = cont + 1;
+    b = 1;
   }
-  ajuste();
+  ajuste(b);
 });
 
 $('#btgoogle').click(function () {
-  if (verify['google'] == true) {
-    $("#btgoogle").removeClass("selected");
-    $("#btgoogle").addClass("unselected");
-    ash.get('.table').hideColumn(4);
-    verify['google'] = false;
-    cont = cont - 1;
+  if (verify['google'] == true && cont != 1) {
+   // $("#btgoogle").removeClass("selected");
+   // $("#btgoogle").addClass("unselected");
+    //$('.table').hideColumn(4);
+    if(cont >= 2){
+      $('.cgcp').fadeToggle('fast');
+      verify['google'] = false;
+      cont = cont - 1;
+      b = 0;
+    }
+
   }
   else {
-    $("#btgoogle").removeClass("unselected");
-    $("#btgoogle").addClass("selected");
-    ash.get('.table').showColumn(4);
+   // $("#btgoogle").removeClass("unselected");
+   // $("#btgoogle").addClass("selected");
+    //$('.table').showColumn(4);
+    $('.cgcp').fadeToggle('fast');
     verify['google'] = true;
     cont = cont + 1;
+    b = 1;
   }
-  ajuste();
+  ajuste(b);
 });
 
 $('#btibm').click(function () {
-  if (verify['ibm'] == true) {
-    $("#btibm").removeClass("selected");
-    $("#btibm").addClass("unselected");
-    ash.get('.table').hideColumn(5);
-    verify['ibm'] = false;
-    cont = cont - 1;
+  if (verify['ibm'] == true && cont != 1) {
+//    $("#btibm").removeClass("selected");
+//    $("#btibm").addClass("unselected");
+    //$('.table').hideColumn(5);
+    if(cont >= 2){
+      $('.cibm').fadeToggle('fast');
+      verify['ibm'] = false;
+      cont = cont - 1;
+      b = 0;
+    }
+
   }
   else {
-    $("#btibm").removeClass("unselected");
-    $("#btibm").addClass("selected");
-    ash.get('.table').showColumn(5);
+//    $("#btibm").removeClass("unselected");
+//    $("#btibm").addClass("selected");
+    //$('.table').showColumn(5);
+    $('.cibm').fadeToggle('fast');
     verify['ibm'] = true;
     cont = cont + 1;
+    b = 1;
   }
-  ajuste();
+  ajuste(b);
 });
 
 $('#btoracle').click(function () {
-  if (verify['oracle'] == true) {
-    $("#btoracle").removeClass("selected");
-    $("#btoracle").addClass("unselected");
-    ash.get('.table').hideColumn(6);
-    verify['oracle'] = false;
-    cont = cont - 1;
+  if (verify['oracle'] == true && cont != 1) {
+
+    // $("#btoracle").removeClass("selected");
+    // $("#btoracle").addClass("unselected");
+    if (cont >= 2) {
+      $('.coracle').fadeToggle('fast');
+      // $('.table tr td:nth-child(6)').fadeToggle('fast');
+      // $('.table th:nth-child(6)').fadeToggle('fast');
+      // //$('.table').hideColumn(6);
+      verify['oracle'] = false;
+      cont = cont - 1;
+      b = 0;
+    }
+
   }
   else {
-    $("#btoracle").removeClass("unselected");
-    $("#btoracle").addClass("selected");
-    ash.get('.table').showColumn(6);
+   // $("#btoracle").removeClass("unselected");
+   // $("#btoracle").addClass("selected");
+    $('.coracle').fadeIn('fast');
+    ////$('.table').showColumn(6);
+    // $('.table tr td:nth-child(6)').fadeToggle('slow');
+    // $('.table th:nth-child(6)').fadeToggle('slow');
     verify['oracle'] = true;
+
     cont = cont + 1;
+    b = 1;
   }
-  ajuste();
+  ajuste(b);
 });
 
 $('#btalibaba').click(function () {
   if (verify['alibaba'] == true) {
-    $("#btalibaba").removeClass("selected");
-    $("#btalibaba").addClass("unselected");
-    ash.get('.table').hideColumn(7);
-    verify['alibaba'] = false;
-    cont = cont - 1;
+    //$("#btalibaba").removeClass("selected");
+    //$("#btalibaba").addClass("unselected");
+    //$('.table').hideColumn(7);
+    if(cont >= 2){
+      $('.calibaba').fadeToggle('fast');
+      verify['alibaba'] = false;
+      cont = cont - 1;
+      b = 0;
+    }
+
   }
   else {
-    $("#btalibaba").removeClass("unselected");
-    $("#btalibaba").addClass("selected");
-    ash.get('.table').showColumn(7);
+    //$("#btalibaba").removeClass("unselected");
+    //$("#btalibaba").addClass("selected");
+    //$('.table').showColumn(7);
+    $('.calibaba').fadeToggle('fast');
     verify['alibaba'] = true;
     cont = cont + 1;
+    b = 1;
   }
-  ajuste();
+  ajuste(b);
 });
 
 
@@ -145,16 +191,43 @@ function ajuste(c) {
     else if(classtable == 'table2'){
       $("table").removeClass("table2");
       $("table").addClass("table1");
-      classtable = 'table1;'
+      classtable = 'table1';
     }
     else if(classtable == 'table1'){
-      $("table").removeClass("table1");
-      $("table").addClass("table0");
-      classtable = 'table0';
+
     }
   }
   else{
-
+    if(classtable == 'table6'){
+      $("table").removeClass("table6");
+      $("table").addClass("table5");
+      classtable = 'table5';
+    }
+    else if(classtable == 'table5'){
+      $("table").removeClass("table5");
+      $("table").addClass("table6");
+      classtable='table6';
+    }
+    else if(classtable == 'table4'){
+      $("table").removeClass("table4");
+      $("table").addClass("table5");
+      classtable = 'table5';
+    }
+    else if(classtable == 'table3'){
+      $("table").removeClass("table3");
+      $("table").addClass("table4");
+      classtable= 'table4';
+    }
+    else if(classtable == 'table2'){
+      $("table").removeClass("table2");
+      $("table").addClass("table3");
+      classtable = 'table3';
+    }
+    else if(classtable == 'table1'){
+      $("table").removeClass("table1");
+      $("table").addClass("table2");
+      classtable = 'table2';
+    }
   }
 
 
@@ -225,6 +298,7 @@ function ajuste(c) {
 //     document.getElementsByClassName('table').classList.add('table0');
 //     classtable = 'table0';
 //   }
+
 
 }
 

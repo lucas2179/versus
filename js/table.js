@@ -40,19 +40,20 @@ function rendertable(id) {
 }
 
 function dataprocessor(input, type) {
+    cprovider = "c" + type;
     var trHTML = '';
     if (input.length > 1) {
-        trHTML += '<td><ul>';
+        trHTML += '<td class= ' + cprovider + '><ul>';
         for (var i in input) {
             trHTML += '<li class="tooltip"><img src="../img/icons/cloudproviders/' + type + '/' + input[i].icon + '" class="img-responsive img-icons"><a style="color: black" href="' + input[i].ref + '">' + input[i].name + '<span class="tooltiptext">' + formatLocation(input[i].location) + '</span></a></div></li>';
         }
         trHTML += '</ul></td>';
     } else {
         if (input[0].name === "") {
-            trHTML += '<td>' + '<i class="fas fa-ban" style="color: red; font-size: 24px"></i>' + '</td>'
+            trHTML += '<td class= ' + cprovider + '><i class="fas fa-ban" style="color: red; font-size: 24px"></i>' + '</td>'
         } else {
             for (var i in input) {
-                trHTML += '<td><ul><li class="tooltip"><img src="../img/icons/cloudproviders/' + type + '/' + input[0].icon + '" class="img-responsive img-icons"><a style="color: black" href="' + input[0].ref + '">' + input[0].name + '<span class="tooltiptext">' + formatLocation(input[0].location) + '</span></a></li></ul></td>';
+                trHTML += '<td class= ' + cprovider + '><ul><li class="tooltip"><img src="../img/icons/cloudproviders/' + type + '/' + input[0].icon + '" class="img-responsive img-icons"><a style="color: black" href="' + input[0].ref + '">' + input[0].name + '<span class="tooltiptext">' + formatLocation(input[0].location) + '</span></a></li></ul></td>';
             }
         }
     }

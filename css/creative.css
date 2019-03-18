@@ -1919,22 +1919,29 @@ pre code {
 }
 .table1{
   width: 28.6% !important;
+  transition: 0.2s;
 }
 .table2{
   width: 42.88% !important;
+  transition: 0.2s;
 }
 .table3{
   width: 57.16% !important;
+  transition: 0.2s;
 }
 .table4{
   width: 71.44% !important;
+  transition: 0.2s;
 }
 .table5{
   width: 85.72% !important;
+  transition: 0.2s;
 }
 .table0{
   width: 14.32% !important;
+  transition: 0.2s;
 }
+
 
 .tooltip {
   position: relative;

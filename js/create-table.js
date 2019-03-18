@@ -35,36 +35,42 @@ function tableCreate(name, id) {
     th1.innerText = "Service";
 
     var th2 = document.createElement("th");
+    th2.setAttribute("class", "caws");
     var img1 = document.createElement("img");
     img1.setAttribute("src", "img/logos/aws.png");
     img1.setAttribute("alt", "icon");
     img1.setAttribute("style", "height: 50%; width: 70%;");
 
     var th3 = document.createElement("th");
+    th3.setAttribute("class", "cazure");
     var img2 = document.createElement("img");
     img2.setAttribute("src", "img/logos/msazure.png");
     img2.setAttribute("alt", "icon");
     img2.setAttribute("style", "height: 45%; width: 65%;");
 
     var th4 = document.createElement("th");
+    th4.setAttribute("class", "cgcp");
     var img3 = document.createElement("img");
     img3.setAttribute("src", "img/logos/google.png");
     img3.setAttribute("alt", "icon");
     img3.setAttribute("style", "height: 50%; width: 80%;");
 
     var th5 = document.createElement("th");
+    th5.setAttribute("class", "cibm");
     var img4 = document.createElement("img");
     img4.setAttribute("src", "img/logos/IBM-Cloud.png");
     img4.setAttribute("alt", "icon");
     img4.setAttribute("style", "height: 34%; width: 75%;");
 
     var th6 = document.createElement("th");
+    th6.setAttribute("class", "coracle");
     var img5 = document.createElement("img");
     img5.setAttribute("src", "img/logos/oracle.png");
     img5.setAttribute("alt", "icon");
     img5.setAttribute("style", "height: 60%; width: 60%;");
 
     var th7 = document.createElement("th");
+    th7.setAttribute("class", "calibaba");
     var img6 = document.createElement("img");
     img6.setAttribute("src", "img/logos/alibaba.png");
     img6.setAttribute("alt", "icon");
